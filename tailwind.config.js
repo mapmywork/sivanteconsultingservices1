@@ -7,21 +7,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#1E40AF',
-        secondary: '#0F172A',
-        gold: '#D4AF37',
-        background: '#F8FAFC',
-        text: '#111827',
-        muted: '#6B7280',
-        success: '#059669',
-        purple: '#7C3AED',
+        primary: '#FFD700', // Golden Yellow
+        secondary: '#0A0A0A', // Dark Background
+        gold: '#FFD700', // Golden Yellow
+        background: '#000000', // Black
+        text: '#F3F4F6', // Light gray
+        muted: '#9CA3AF', // Gray 400
+        success: '#FFD700', // Golden Yellow
+        purple: '#B8860B', // Dark goldenrod for gradients
       },
       fontFamily: {
         playfair: ['"Playfair Display"', 'serif'],
         inter: ['"Inter"', 'sans-serif'],
       },
       backgroundImage: {
-        'hero-gradient': 'linear-gradient(to right, #0F172A, #1E40AF)',
+        'hero-gradient': 'linear-gradient(to right, #000000, #111111)',
       }
     },
   },

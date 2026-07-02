@@ -1,82 +1,62 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      name: 'Rajiv Mehta',
-      role: 'CEO',
-      company: 'NexaTech Solutions',
-      text: 'Siavnte Consulting Services completely transformed our operational workflow. Their strategic insights are unmatched in the industry.'
-    },
-    {
-      name: 'Priya Sharma',
-      role: 'HR Director',
-      company: 'GlobalBPO India',
-      text: 'The executive hiring team at Siavnte found us the perfect leadership candidates when we were scaling our operations. Highly recommended.'
-    },
-    {
-      name: 'Ankit Verma',
-      role: 'Founder',
-      company: 'StartFast Ventures',
-      text: 'As a startup, we needed precise guidance on scaling. Siavnte delivered beyond our expectations with actionable, results-driven strategies.'
-    }
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
   return (
-    <section id="testimonials" className="py-24 bg-secondary text-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <span className="text-sm font-semibold tracking-widest text-gold uppercase mb-4 block">Client Success</span>
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold">What Our Partners Say</h2>
-        </div>
+    <section id="testimonials" className="relative w-full h-screen min-h-[600px] flex items-center">
+      {/* Background with overlay */}
+      <div className="absolute inset-0 w-full h-full">
+        {/* Dark gradient overlay that is solid black on the left and fades out to the right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-[#0A0A0A]/90 to-transparent z-10 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-[#0A1A16]/30 z-10 mix-blend-overlay"></div>
+        <img 
+          src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+          alt="Employee discussion" 
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
 
-        <div className="relative max-w-4xl mx-auto">
-          <div className="absolute top-1/2 -left-4 md:-left-12 transform -translate-y-1/2 z-10">
-            <button onClick={prevTestimonial} className="p-2 bg-white/10 rounded-full hover:bg-white/20 text-white transition-colors">
-              <ChevronLeft size={24} />
-            </button>
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col justify-center">
+        
+        {/* Main Content Area */}
+        <div className="max-w-3xl flex-1 flex flex-col justify-center pt-20">
+          
+          <div className="mb-6">
+            <span className="text-6xl text-gray-400 font-serif leading-none opacity-80 block mb-2">"</span>
           </div>
           
-          <div className="absolute top-1/2 -right-4 md:-right-12 transform -translate-y-1/2 z-10">
-            <button onClick={nextTestimonial} className="p-2 bg-white/10 rounded-full hover:bg-white/20 text-white transition-colors">
-              <ChevronRight size={24} />
-            </button>
+          <h2 className="text-4xl md:text-5xl lg:text-[54px] text-white mb-12 leading-tight font-light">
+            I love the collaborative<br />
+            spirit, innovation & growth<br />
+            opportunities here.
+          </h2>
+
+          <div className="flex items-center gap-4">
+            <img 
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80" 
+              alt="Elena Rodriguez" 
+              className="w-12 h-12 rounded-full object-cover border border-white/20"
+            />
+            <div>
+              <h4 className="text-white text-base">Elena Rodriguez</h4>
+              <p className="text-gray-400 text-[10px] font-mono tracking-widest uppercase mt-1">
+                MARKETING SPECIALIST
+              </p>
+            </div>
           </div>
 
-          <div className="min-h-[300px] flex items-center justify-center">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentIndex}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.5 }}
-                className="text-center px-8 md:px-16"
-              >
-                <div className="text-gold mb-6 text-2xl tracking-widest">★★★★★</div>
-                <p className="text-xl md:text-3xl font-playfair italic text-gray-300 mb-10 leading-relaxed">
-                  "{testimonials[currentIndex].text}"
-                </p>
-                <div>
-                  <h4 className="text-xl font-bold">{testimonials[currentIndex].name}</h4>
-                  <p className="text-gray-400 mt-1">{testimonials[currentIndex].role}, {testimonials[currentIndex].company}</p>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
         </div>
+
+        {/* Bottom Button */}
+        <div className="pb-12 pt-8">
+          <Link 
+            to="/careers" 
+            className="inline-block px-5 py-2.5 border border-white/30 text-gray-300 rounded hover:bg-white hover:text-black hover:border-white transition-colors text-sm"
+          >
+            Find open jobs
+          </Link>
+        </div>
+
       </div>
     </section>
   );

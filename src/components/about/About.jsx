@@ -2,20 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const About = () => {
-  const cards = [
-    { title: 'Parent Organization', desc: 'Leading a diverse portfolio.' },
-    { title: 'Strategic Growth', desc: 'Sustainable business scaling.' },
-    { title: 'Multi Industry Expertise', desc: 'Cross-domain knowledge.' },
-    { title: 'Future Focused', desc: 'Innovation-driven approaches.' }
-  ];
 
   return (
-    <section id="about" className="py-24 bg-background">
+    <section id="about" className="py-24 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <span className="text-sm font-semibold tracking-widest text-primary uppercase mb-4 block">About Us</span>
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-secondary mb-6">
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white mb-6">
               More Than Consulting.<br />We Build Businesses.
             </h2>
             <p className="text-lg text-muted mb-6 leading-relaxed">
@@ -25,21 +19,20 @@ const About = () => {
               We operate at the intersection of strategy and execution. Our business philosophy is rooted in long-term partnerships, where we align our expertise with your strategic goals to deliver measurable, sustainable growth.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {cards.map((card, idx) => (
-              <motion.div 
-                key={idx}
-                whileHover={{ y: -5 }}
-                className="glass-card p-8 group hover:border-primary/30 transition-colors"
-              >
-                <div className="w-12 h-12 bg-primary/10 rounded-xl mb-6 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                  <div className="w-6 h-6 bg-primary rounded-full"></div>
-                </div>
-                <h3 className="text-xl font-bold text-secondary mb-2">{card.title}</h3>
-                <p className="text-muted">{card.desc}</p>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative rounded-2xl overflow-hidden glass-card aspect-[4/3] group shadow-2xl"
+          >
+            <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500 z-10 mix-blend-overlay"></div>
+            <img 
+              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+              alt="Siavnte Consulting Board Meeting" 
+              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+            />
+          </motion.div>
         </div>
       </div>
     </section>

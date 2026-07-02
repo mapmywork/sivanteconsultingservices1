@@ -13,11 +13,11 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-white relative">
+    <section id="services" className="py-24 bg-[#0A0A0A] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-sm font-semibold tracking-widest text-primary uppercase mb-4 block">Our Services</span>
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-secondary mb-6">Expertise That Drives Results</h2>
+          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white mb-6">Expertise That Drives Results</h2>
           <p className="text-lg text-muted">Comprehensive solutions designed to address complex business challenges and accelerate growth.</p>
         </div>
         
@@ -26,13 +26,13 @@ const Services = () => {
             <motion.div
               key={idx}
               whileHover={{ y: -10 }}
-              className="p-8 rounded-2xl bg-background border border-gray-100 hover:shadow-2xl transition-all duration-300 group relative overflow-hidden"
+              className="p-8 rounded-2xl bg-black border border-white/10 hover:shadow-2xl transition-all duration-300 group relative overflow-hidden"
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-purple transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-              <div className="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+              <div className="w-16 h-16 bg-[#0A0A0A] rounded-2xl shadow-sm flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold text-secondary mb-4">{service.title}</h3>
+              <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
               <p className="text-muted leading-relaxed">{service.desc}</p>
             </motion.div>
           ))}

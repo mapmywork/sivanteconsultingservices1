@@ -61,10 +61,10 @@ const Hero = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-          <a href="#services" className="px-8 py-4 bg-gold text-secondary font-semibold rounded-full hover:bg-yellow-400 transition-colors w-full sm:w-auto">
+          <a href="#services" className="px-8 py-4 bg-gold text-white font-semibold rounded-full hover:bg-yellow-400 transition-colors w-full sm:w-auto">
             Explore Services
           </a>
-          <a href="#contact" className="px-8 py-4 bg-transparent border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-colors w-full sm:w-auto">
+          <a href="#contact" className="px-8 py-4 bg-transparent border border-white/30 text-white font-semibold rounded-full hover:bg-[#0A0A0A]/10 transition-colors w-full sm:w-auto">
             Talk to Us
           </a>
         </div>
