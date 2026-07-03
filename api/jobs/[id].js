@@ -3,11 +3,10 @@ import { verifyToken } from '../_middleware/auth.js';
 
 export default async function handler(req, res) {
   const { id } = req.query;
-  const sql = getDb();
-
   // GET /api/jobs/:id — public, get single job
   if (req.method === 'GET') {
     try {
+      const sql = getDb();
       const jobs = await sql`SELECT * FROM jobs WHERE id = ${id}`;
 
       if (jobs.length === 0) {

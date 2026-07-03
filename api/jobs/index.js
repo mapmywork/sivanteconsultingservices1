@@ -2,11 +2,10 @@ import { getDb } from '../../db/connection.js';
 import { verifyToken } from '../_middleware/auth.js';
 
 export default async function handler(req, res) {
-  const sql = getDb();
-
   // GET /api/jobs — public, list all jobs
   if (req.method === 'GET') {
     try {
+      const sql = getDb();
       const jobs = await sql`
         SELECT * FROM jobs ORDER BY created_at DESC
       `;
@@ -39,6 +38,7 @@ export default async function handler(req, res) {
         return res.status(400).json({ error: 'id, title, and description are required' });
       }
 
+      const sql = getDb();
       // Check if ID already exists
       const existing = await sql`SELECT id FROM jobs WHERE id = ${id}`;
       if (existing.length > 0) {
