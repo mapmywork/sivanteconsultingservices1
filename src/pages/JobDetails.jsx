@@ -1,14 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle2, MapPin, Clock, CircleDollarSign } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { jobs } from './Careers';
+import { getJob } from '../services/api';
 
 const JobDetails = () => {
   const { id } = useParams();
-  const job = jobs.find((j) => j.id === id);
+  const [job, setJob] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
 
-  if (!job) {
+  useEffect(() => {
+    getJob(id)
+      .then((data) => setJob(data))
+      .catch(() => setNotFound(true))
+      .finally(() => setLoading(false));
+  }, [id]);
+
+  // Loading state
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-[#0A0A0A] flex items-center justify-center pt-24">
+        <div className="w-8 h-8 border-2 border-[#FFD700] border-t-transparent rounded-full animate-spin" />
+      </div>
+    );
+  }
+
+  // Not found state
+  if (notFound || !job) {
     return (
       <div className="min-h-screen bg-[#0A0A0A] flex flex-col items-center justify-center pt-24 px-4 text-center">
         <h1 className="text-3xl font-playfair text-white mb-4">Job Not Found</h1>
