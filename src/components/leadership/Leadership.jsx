@@ -22,7 +22,7 @@ const Leadership = () => {
       objectPosition: 'object-center',
     },
     {
-      name: 'Eram Khan',
+      name: 'Airam Khan',
       role: 'Co-Founder & Associate Director',
       image: eramImg,
       description: 'Expert in talent acquisition and human capital management, ensuring we bring in the best minds to transform client organizations.',
