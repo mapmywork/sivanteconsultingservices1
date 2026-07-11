@@ -1,25 +1,32 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+import joginderImg from '../../assets/founders/jo7.jpeg';
+import anamImg from '../../assets/founders/anam.jpeg';
+import eramImg from '../../assets/founders/eram.jpeg';
+
 const Leadership = () => {
   const leaders = [
     {
       name: 'Joginder Singh',
       role: 'Founder & CEO',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: joginderImg,
       description: 'Visionary leader focused on strategic growth and building long-lasting corporate partnerships that drive our core business forward.',
+      objectPosition: 'object-center',
     },
     {
       name: 'Anam Khan',
       role: 'Managing Director',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: anamImg,
       description: 'Proactive organizer and communicator, driving project success and operational excellence through meticulous planning and coordination.',
+      objectPosition: 'object-center',
     },
     {
       name: 'Eram Khan',
       role: 'Co-Founder & Associate Director',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: eramImg,
       description: 'Expert in talent acquisition and human capital management, ensuring we bring in the best minds to transform client organizations.',
+      objectPosition: 'object-top',
     }
   ];
 
@@ -48,7 +55,7 @@ const Leadership = () => {
                 <img 
                   src={leader.image} 
                   alt={leader.name} 
-                  className="w-full h-full object-cover" 
+                  className={`w-full h-full object-cover ${leader.objectPosition || 'object-center'}`} 
                 />
               </div>
 
