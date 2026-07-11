@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import aboutImage from '../../about.webp';
 
 const About = () => {
 
@@ -28,9 +29,9 @@ const About = () => {
           >
             <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500 z-10 mix-blend-overlay"></div>
             <img 
-              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+              src={aboutImage} 
               alt="Siavnte Consulting Board Meeting" 
-              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
             />
           </motion.div>
         </div>
