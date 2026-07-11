@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import joginderImg from '../../assets/founders/joy.jpeg';
+import joginderImg from '../../assets/founders/joginder.jpeg';
 import anamImg from '../../assets/founders/anam.jpeg';
 import airamImg from '../../assets/founders/airam.jpeg';
 
