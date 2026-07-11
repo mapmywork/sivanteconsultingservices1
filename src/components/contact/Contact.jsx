@@ -18,7 +18,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-lg font-bold text-white mb-1">Email Us</h4>
-                <p className="text-muted">contact@siavnte.com</p>
+                <a href="mailto:myhr@siavnteconsulting.services" className="text-muted hover:text-primary transition-colors">myhr@siavnteconsulting.services</a>
               </div>
             </div>
             <div className="flex items-start space-x-4">

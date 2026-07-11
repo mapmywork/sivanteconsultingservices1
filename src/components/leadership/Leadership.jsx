@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import joginderImg from '../../assets/founders/jo7.jpeg';
+import joginderImg from '../../assets/founders/joy.jpeg';
 import anamImg from '../../assets/founders/anam.jpeg';
-import eramImg from '../../assets/founders/eram.jpeg';
+import airamImg from '../../assets/founders/airam.jpeg';
 
 const Leadership = () => {
   const leaders = [
@@ -12,7 +12,7 @@ const Leadership = () => {
       role: 'Founder & CEO',
       image: joginderImg,
       description: 'Visionary leader focused on strategic growth and building long-lasting corporate partnerships that drive our core business forward.',
-      objectPosition: 'object-center',
+      objectPosition: 'object-top',
     },
     {
       name: 'Anam Khan',
@@ -24,7 +24,7 @@ const Leadership = () => {
     {
       name: 'Airam Khan',
       role: 'Co-Founder & Associate Director',
-      image: eramImg,
+      image: airamImg,
       description: 'Expert in talent acquisition and human capital management, ensuring we bring in the best minds to transform client organizations.',
       objectPosition: 'object-top',
     }

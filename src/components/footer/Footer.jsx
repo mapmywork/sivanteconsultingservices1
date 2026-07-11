@@ -9,7 +9,10 @@ const Footer = () => {
           <div>
             <img src={logo} alt="Siavnte Logo" className="h-12 w-auto mb-6" />
             <p className="text-gray-400 mb-6">Parent Company of Chinnu Car Rentals & Brand Mind Pvt. Ltd.</p>
-            <p className="text-sm font-medium text-gold uppercase tracking-wider">Where Vision Meets Leadership.</p>
+            <p className="text-sm font-medium text-gold uppercase tracking-wider mb-4">Where Vision Meets Leadership.</p>
+            <a href="mailto:myhr@siavnteconsulting.services" className="text-gray-400 hover:text-white transition-colors block">
+              myhr@siavnteconsulting.services
+            </a>
           </div>
           <div>
             <h4 className="text-lg font-bold text-white mb-6">Quick Links</h4>
