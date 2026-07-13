@@ -160,9 +160,14 @@ const JobDetails = () => {
                 </div>
               </div>
 
-              <button className="w-full sm:w-auto px-8 py-3 bg-primary text-white font-bold rounded-full hover:bg-secondary transition-colors hover:scale-105 transform">
-                Apply Now
-              </button>
+              <a 
+                href="https://wa.me/918178444872" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-8 py-3 bg-primary text-black font-bold rounded-full hover:bg-secondary transition-colors hover:scale-105 transform inline-block text-center"
+              >
+                Share your resume
+              </a>
             </div>
           </div>
         </motion.div>
