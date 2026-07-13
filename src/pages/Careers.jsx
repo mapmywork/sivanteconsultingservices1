@@ -25,16 +25,16 @@ const Careers = () => {
         <div className="absolute inset-0 w-full h-full">
           <div className="absolute inset-0 bg-[#0A1A16]/80 z-10 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/50 to-transparent z-20"></div>
-          <img 
-            src={heroImage} 
-            alt="Careers Hero" 
+          <img
+            src={heroImage}
+            alt="Careers Hero"
             className="w-full h-full object-cover object-center"
           />
         </div>
 
         {/* Hero Content */}
         <div className="relative z-30 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-32">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -49,7 +49,7 @@ const Careers = () => {
             <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed mb-10">
               Discover a world of possibilities. Elevate your career with us — a place where passion meets purpose.
             </p>
-            
+
             <a href="#open-jobs" className="inline-flex flex-col items-center gap-3 text-xs font-bold tracking-widest text-gray-300 hover:text-white transition-colors group mx-auto">
               VIEW OPEN JOBS
               <div className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center group-hover:border-white transition-colors">
@@ -83,8 +83,8 @@ const Careers = () => {
         {error && (
           <div className="py-12 text-center">
             <p className="text-gray-400 mb-4">Unable to load job listings.</p>
-            <button 
-              onClick={() => window.location.reload()} 
+            <button
+              onClick={() => window.location.reload()}
               className="px-6 py-2 bg-primary text-black rounded-full font-bold hover:bg-[#E5C200] transition-colors text-sm"
             >
               Retry
@@ -109,7 +109,7 @@ const Careers = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.1 }}
               >
-                <Link 
+                <Link
                   to={`/careers/${job.id}`}
                   className="py-8 border-b border-gray-800 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:bg-white/[0.02] transition-colors group cursor-pointer -mx-6 px-6 rounded-lg block"
                 >
@@ -119,7 +119,7 @@ const Careers = () => {
                       {job.description}
                     </p>
                   </div>
-                  
+
                   <div className="flex items-center gap-6">
                     <div className="flex gap-2">
                       {job.tags.map((tag) => (
@@ -131,7 +131,7 @@ const Careers = () => {
                         </span>
                       ))}
                     </div>
-                    
+
                     <div className="w-10 h-10 rounded-full bg-gray-800/80 flex items-center justify-center text-gray-300 group-hover:bg-primary group-hover:text-white transition-colors flex-shrink-0">
                       <ArrowRight size={18} />
                     </div>

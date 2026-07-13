@@ -38,6 +38,9 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
+            <a href="tel:+919651463572" className={`text-sm font-bold transition-colors ${isScrolled ? 'text-gray-200 hover:text-primary' : 'text-gray-200 hover:text-white'}`}>
+              +91 9651463572
+            </a>
             <a href="/contact" className="px-6 py-2 bg-primary text-[#0A0A0A] font-bold text-sm rounded-full hover:bg-gold transition-colors">
               Get in Touch
             </a>
@@ -65,6 +68,9 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
+              <a href="tel:+919651463572" className="block px-3 py-3 text-base font-bold text-gray-100 hover:bg-white/5 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>
+                +91 9651463572
+              </a>
               <a href="/contact" className="block w-full text-center px-6 py-3 mt-4 bg-primary text-[#0A0A0A] font-bold rounded-md hover:bg-gold" onClick={() => setIsMobileMenuOpen(false)}>
                 Get in Touch
               </a>

@@ -232,11 +232,10 @@ const JobForm = () => {
                 key={tag}
                 type="button"
                 onClick={() => toggleTag(tag)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold uppercase tracking-wider border transition-all duration-200 ${
-                  form.tags.includes(tag)
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold uppercase tracking-wider border transition-all duration-200 ${form.tags.includes(tag)
                     ? 'bg-[#FFD700]/10 text-[#FFD700] border-[#FFD700]/30'
                     : 'bg-white/5 text-gray-500 border-gray-800 hover:border-gray-600 hover:text-gray-300'
-                }`}
+                  }`}
               >
                 {tag}
               </button>

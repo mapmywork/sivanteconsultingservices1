@@ -27,7 +27,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-lg font-bold text-white mb-1">WhatsApp / Phone</h4>
-                <p className="text-muted">+91 8178444872</p>
+                <p className="text-muted">+91 9651463572</p>
               </div>
             </div>
             <div className="flex items-start space-x-4">
@@ -36,7 +36,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-lg font-bold text-white mb-1">Headquarters</h4>
-                <p className="text-muted">India (Full address available upon request)</p>
+                <p className="text-muted">Metro Station, Mehrauli-Gurgaon Rd, Indian Airlines Pilots Society, Sushant Lok Phase I, Gurugram, Haryana 122009</p>
               </div>
             </div>
           </div>

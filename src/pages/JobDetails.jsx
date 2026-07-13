@@ -161,12 +161,12 @@ const JobDetails = () => {
               </div>
 
               <a 
-                href="https://wa.me/918178444872" 
+                href="https://forms.gle/uBWvKHzS2dNQuYgJ9" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-3 bg-primary text-black font-bold rounded-full hover:bg-secondary transition-colors hover:scale-105 transform inline-block text-center"
               >
-                Share your resume
+                Apply Now
               </a>
             </div>
           </div>
