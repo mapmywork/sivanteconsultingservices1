@@ -82,7 +82,7 @@ const Testimonials = () => {
   const currentTestimonial = testimonialsData[currentIndex];
 
   return (
-    <section id="testimonials" className="relative w-full h-screen min-h-[600px] flex items-center overflow-hidden">
+    <section id="testimonials" className="relative w-full min-h-screen flex items-center overflow-hidden py-20">
       {/* Background with overlay */}
       <div className="absolute inset-0 w-full h-full">
         {/* Dark gradient overlay that is solid black on the left and fades out to the right */}
@@ -104,17 +104,17 @@ const Testimonials = () => {
             <span className="text-6xl text-gray-400 font-serif leading-none opacity-80 block mb-2">"</span>
           </div>
           
-          <div className="h-[280px] md:h-[220px] lg:h-[200px] relative w-full">
+          <div className="min-h-[450px] sm:min-h-[400px] md:min-h-[350px] lg:min-h-[300px] flex flex-col justify-center w-full">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 50 }}
                 transition={{ duration: 0.5 }}
-                className="absolute inset-0"
+                className="w-full"
               >
-                <h2 className="text-2xl md:text-3xl lg:text-4xl text-white mb-8 leading-relaxed font-light italic">
+                <h2 className="text-[24px] md:text-[28px] lg:text-[32px] text-white mb-6 leading-relaxed font-light italic">
                   {currentTestimonial.text}
                 </h2>
 
