@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, CheckCircle2, MapPin, Clock, CircleDollarSign } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, MapPin, Clock, IndianRupee } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { getJob } from '../services/api';
 
@@ -81,7 +81,7 @@ const JobDetails = () => {
               <span>{job.details?.type}</span>
             </div>
             <div className="flex items-center gap-2 text-gray-400">
-              <CircleDollarSign size={18} className="text-primary" />
+              <IndianRupee size={18} className="text-primary" />
               <span>{job.details?.salary}</span>
             </div>
           </div>
