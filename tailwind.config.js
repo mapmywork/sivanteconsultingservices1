@@ -22,6 +22,15 @@ export default {
       },
       backgroundImage: {
         'hero-gradient': 'linear-gradient(to right, #000000, #111111)',
+      },
+      animation: {
+        marquee: 'marquee 30s linear infinite',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
       }
     },
   },

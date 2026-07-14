@@ -1,6 +1,22 @@
 import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
+const Instagram = ({ size = 24, className = "" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+  </svg>
+);
+
+const Linkedin = ({ size = 24, className = "" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect width="4" height="12" x="2" y="9"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+  </svg>
+);
+
 const Contact = () => {
   return (
     <section id="contact" className="py-24 bg-[#0A0A0A]">
@@ -37,6 +53,18 @@ const Contact = () => {
               <div>
                 <h4 className="text-lg font-bold text-white mb-1">Headquarters</h4>
                 <p className="text-muted">Metro Station, Mehrauli-Gurgaon Rd, Indian Airlines Pilots Society, Sushant Lok Phase I, Gurugram, Haryana 122009</p>
+              </div>
+            </div>
+
+            <div className="pt-6 border-t border-white/10 mt-6">
+              <h4 className="text-lg font-bold text-white mb-4">Connect With Us</h4>
+              <div className="flex space-x-4">
+                <a href="https://www.instagram.com/siavnte_consulting?utm_source=qr&igsh=MTh0ZjNvZ3M2dXg0YQ==" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-white hover:bg-primary hover:text-[#0A0A0A] transition-colors">
+                  <Instagram size={24} />
+                </a>
+                <a href="https://www.linkedin.com/company/sivante-consulting-service/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-white hover:bg-primary hover:text-[#0A0A0A] transition-colors">
+                  <Linkedin size={24} />
+                </a>
               </div>
             </div>
           </div>

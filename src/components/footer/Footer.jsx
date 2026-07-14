@@ -1,5 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
+
+const Instagram = ({ size = 24, className = "" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+  </svg>
+);
+
+const Linkedin = ({ size = 24, className = "" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect width="4" height="12" x="2" y="9"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+  </svg>
+);
 
 const Footer = () => {
   return (
@@ -10,12 +27,20 @@ const Footer = () => {
             <img src={logo} alt="Siavnte Logo" className="h-12 w-auto mb-6" />
             <p className="text-gray-400 mb-6">Parent Company of Chinnu Car Rentals & Brand Mind Pvt. Ltd.</p>
             <p className="text-sm font-medium text-gold uppercase tracking-wider mb-4">Where Vision Meets Leadership.</p>
-            <div className="space-y-2">
+            <div className="space-y-2 mb-6">
               <a href="mailto:myhr@siavnteconsulting.services" className="text-gray-400 hover:text-white transition-colors block">
                 myhr@siavnteconsulting.services
               </a>
               <a href="tel:+919651463572" className="text-gray-400 hover:text-white transition-colors block">
                 +91 9651463572
+              </a>
+            </div>
+            <div className="flex space-x-4">
+              <a href="https://www.instagram.com/siavnte_consulting?utm_source=qr&igsh=MTh0ZjNvZ3M2dXg0YQ==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-[#0A0A0A] transition-all">
+                <Instagram size={20} />
+              </a>
+              <a href="https://www.linkedin.com/company/sivante-consulting-service/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-[#0A0A0A] transition-all">
+                <Linkedin size={20} />
               </a>
             </div>
           </div>
@@ -26,6 +51,7 @@ const Footer = () => {
               <li><a href="#leadership" className="hover:text-primary transition-colors">Leadership</a></li>
               <li><a href="#values" className="hover:text-primary transition-colors">Core Values</a></li>
               <li><a href="#testimonials" className="hover:text-primary transition-colors">Testimonials</a></li>
+              <li><Link to="/careers" className="hover:text-primary transition-colors">Careers</Link></li>
             </ul>
           </div>
           <div>
