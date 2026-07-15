@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, CheckCircle2, MapPin, Clock, IndianRupee } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, MapPin, Clock, IndianRupee, Share2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { getJob } from '../services/api';
 
@@ -143,23 +143,24 @@ const JobDetails = () => {
               Please submit your application, including your resume and a brief cover letter.
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center gap-6 justify-between bg-black/20 p-6 rounded-xl border border-gray-800">
-              <div className="flex items-center gap-4">
-                {job.contact?.avatar && (
-                  <img 
-                    src={job.contact.avatar} 
-                    alt={job.contact.name}
-                    className="w-14 h-14 rounded-full object-cover border-2 border-primary"
-                  />
-                )}
-                <div>
-                  <h4 className="text-base font-medium text-white">{job.contact?.name}</h4>
-                  <p className="text-xs font-bold text-primary tracking-wider uppercase mt-1">
-                    {job.contact?.role}
-                  </p>
-                </div>
-              </div>
-
+            <div className="flex flex-col sm:flex-row items-center gap-4 justify-end bg-black/20 p-6 rounded-xl border border-gray-800">
+              <button 
+                onClick={() => {
+                  if (navigator.share) {
+                    navigator.share({
+                      title: job.title,
+                      url: window.location.href
+                    });
+                  } else {
+                    navigator.clipboard.writeText(window.location.href);
+                    alert("Link copied to clipboard!");
+                  }
+                }}
+                className="w-full sm:w-auto px-8 py-3 border border-gray-600 text-white font-bold rounded-full hover:bg-white/10 transition-colors inline-flex items-center justify-center gap-2"
+              >
+                <Share2 size={18} />
+                Share
+              </button>
               <a 
                 href="https://forms.gle/uBWvKHzS2dNQuYgJ9" 
                 target="_blank" 
